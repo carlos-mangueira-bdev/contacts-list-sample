@@ -1,0 +1,11 @@
+body {
+  background-color: #f1f4f5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
