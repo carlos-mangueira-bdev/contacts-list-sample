@@ -3,6 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
+import ScheduleIcon from '@material-ui/icons/Schedule';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,6 +60,24 @@ export default function Contact(props) {
       <span className={classes.blue}>Booking #: {props.booking_code}</span>
       <span className={classes.blue}>Booking Date: {props.booking_date}</span>
       <span className={classes.blue}>DOB (Age): {props.date_of_birth ? props.date_of_birth : "Unknown"}</span>
+      <Box mt={2} display={"flex"} justifyContent={"center"}>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<VideoCallIcon />}
+        >
+          Visit Now
+        </Button>
+      </Box>
+      <Box mt={2} display={"flex"} justifyContent={"center"}>
+      <Button
+        variant="contained"
+        color="primary"
+        startIcon={<ScheduleIcon />}
+      >
+        Schedule a Visit
+      </Button>
+      </Box>
     </Paper>
   );
 }

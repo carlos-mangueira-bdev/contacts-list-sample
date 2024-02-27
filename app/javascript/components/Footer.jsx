@@ -7,7 +7,10 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     bottom: "0",
     width: "100%",
-    height: "80px"
+    height: "80px",
+    [theme.breakpoints.down('xs')]: {
+      height: "180px",
+    },
   },
   links: {
     '& > * + *': {
